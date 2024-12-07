@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +19,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background: linear-gradient(135deg, #cb11af, #3025fc);
             color: white;
             text-align: center;
+            padding: 20px;
+            /* To ensure content doesn't touch edges on small screens */
         }
 
         .container {
             max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .typing-text {
@@ -40,15 +47,19 @@
             from {
                 width: 0;
             }
+
             to {
                 width: 100%;
             }
         }
 
         @keyframes blink {
-            from, to {
+
+            from,
+            to {
                 border-color: transparent;
             }
+
             50% {
                 border-color: white;
             }
@@ -90,14 +101,48 @@
         .redirect-text a:hover {
             color: #fff;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .typing-text {
+                font-size: 1.4rem;
+            }
+
+            .sub-text {
+                font-size: 1rem;
+            }
+
+            .redirect-text {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .typing-text {
+                font-size: 1.2rem;
+            }
+
+            .sub-text {
+                font-size: 0.9rem;
+            }
+
+            .redirect-text {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1 class="typing-text">Our AI is analyzing the faces, creating separate profiles, and enhancing the photos.</h1>
-        <p class="sub-text">This process may take up to 12-16 hours.</p>
+        <h1 class="typing-text">
+            Our AI is analyzing the faces, <br> creating separate profiles, <br> and enhancing the photos.
+        </h1>
+        <br><br>
+        <p class="sub-text">This process may take up to 4-5 hours.</p>
         <div class="loading-spinner"></div>
-        <p class="redirect-text">In the meantime, visit our <a href="https://example.com">homepage</a>.</p>
+        <p class="redirect-text">In the meantime, visit our <a href="https://jhapendrakandel.com.np">homepage</a>.</p>
     </div>
 </body>
+
 </html>
