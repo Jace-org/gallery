@@ -1,85 +1,103 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing...</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+        }
 
-.container {
-    max-width: 600px;
-}
+        .container {
+            max-width: 600px;
+        }
 
-.typing-text {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid white;
-    animation: typing 5s steps(40, end), blink .7s step-end infinite;
-}
+        .typing-text {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid white;
+            animation: typing 5s steps(40, end), blink .7s step-end infinite;
+        }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
 
-@keyframes blink {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: white;
-    }
-}
+        @keyframes blink {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: white;
+            }
+        }
 
-.sub-text {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
+        .sub-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
 
-.loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.2);
-    border-top-color: white;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
-}
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
-.redirect-text {
-    font-size: 1rem;
-    margin-top: 20px;
-}
+        .redirect-text {
+            font-size: 1rem;
+            margin-top: 20px;
+        }
 
-.redirect-text a {
-    color: #ffdf5d;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+        .redirect-text a {
+            color: #ffdf5d;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-.redirect-text a:hover {
-    color: #fff;
-}
+        .redirect-text a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="typing-text">Our AI is analyzing the faces, creating separate profiles, and enhancing the photos.</h1>
+        <p class="sub-text">This process may take up to 12-16 hours.</p>
+        <div class="loading-spinner"></div>
+        <p class="redirect-text">In the meantime, visit our <a href="https://example.com">homepage</a>.</p>
+    </div>
+</body>
+</html>
